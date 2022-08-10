@@ -1,0 +1,10 @@
+.header {
+    background-color: rgb(28, 27, 27);
+    color: #f2f2f2;
+    padding: 1rem 1rem;
+    text-align: right;
+}
+
+.header__title {
+    text-transform: uppercase;
+}
