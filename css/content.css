@@ -1,0 +1,30 @@
+h2 {
+    font-size: 2rem;
+    margin: 1rem;
+    margin-top: 3rem
+}
+
+.firstH2 {
+    margin-top: 1rem;
+}
+
+.section__p {
+    margin: 1rem;
+    text-align: justify;
+}
+
+.section__quote, ul {
+    margin-left: 3rem;
+    margin-right: 1rem;
+    text-align: justify;
+}
+
+.section__quote {
+    background-color: #bebebe;
+    padding: 1.5rem 1rem;
+}
+
+li {
+    margin: 1rem 0;
+    list-style: disc;
+}
