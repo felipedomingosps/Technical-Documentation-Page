@@ -33,7 +33,114 @@
                     </div>
                 </nav>
                 <div class="content">
-                    <p class="content__paragraph"></p>
+                    <section class="content__section">
+                        <h1>Arrow function expressions</h1>
+                        
+                        <p class="section__p">
+                            An arrow function expression is a compact alternative to a traditional function expression, but is limited and can't be used in all situations.
+                        </p>
+                        <p class="section__p">
+                            There are differences between arrow functions and traditional functions, as well as some limitations:
+                        </p>
+                        <p class="section__p">
+                            <ul>
+                                <li>
+                                    Arrow functions don't have their own bindings to this, arguments or super, and should not be used as methods.
+                                </li>
+                                <li>
+                                    Arrow functions don't have access to the new.target keyword.
+                                </li>
+                                <li>
+                                    Arrow functions aren't suitable for call, apply and bind methods, which generally rely on establishing a scope.
+                                </li>
+                                <li>
+                                    Arrow functions cannot be used as constructors.
+                                </li>
+                                <li>
+                                    Arrow functions cannot use yield, within its body.
+                                </li>
+                            </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Comparing traditional functions to arrow functions</h2>
+                        <p class="section__p">
+                            Let's decompose a "traditional anonymous function" down to the simplest "arrow function" step-by-step:
+                        </p>
+                        <p class="section__quote">
+                                // Traditional Anonymous Function
+                                (function (a) {
+                                return a + 100;
+                                });
+
+                                // Arrow Function Break Down
+
+                                // 1. Remove the word "function" and place arrow between the argument and opening body bracket
+                                (a) => {
+                                return a + 100;
+                                };
+
+                                // 2. Remove the body braces and word "return" — the return is implied.
+                                (a) => a + 100;
+
+                                // 3. Remove the argument parentheses
+                                a => a + 100;
+                        </p>
+                        <p class="section__p">
+                            The { braces } and ( parentheses ) and "return" are required in some cases.
+                        </p>
+                        <p class="section__p">
+                            For example, if you have multiple arguments or no arguments, you'll need to re-introduce parentheses around the arguments:
+                        </p>
+                        <p class="section__quote">
+                                // Traditional Anonymous Function
+                                (function (a, b) {
+                                return a + b + 100;
+                                });
+
+                                // Arrow Function
+                                (a, b) => a + b + 100;
+
+                                const a = 4;
+                                const b = 2;
+
+                                // Traditional Anonymous Function (no arguments)
+                                (function() {
+                                return a + b + 100;
+                                });
+
+                                // Arrow Function (no arguments)
+                                () => a + b + 100;
+                        </p>
+                        <p class="section__p">
+                            Likewise, if the body requires additional lines of processing, you'll need to re-introduce braces PLUS the "return" (arrow functions do not magically guess what or when you want to "return"):
+                        </p>
+                        <p class="section__quote">
+                            // Traditional Anonymous Function
+                            (function (a, b) {
+                            const chuck = 42;
+                            return a + b + chuck;
+                            });
+
+                            // Arrow Function
+                            (a, b) => {
+                            const chuck = 42;
+                            return a + b + chuck;
+                            };
+                        </p>
+                        <p class="section__p">
+                            And finally, for named functions we treat arrow expressions like variables:
+                        </p>
+                        <p class="section__quote">
+                            // Traditional Function
+                            function bob(a) {
+                            return a + 100;
+                            }
+
+                            // Arrow Function
+                            const bob2 = (a) => a + 100;
+                        </p>
+                    </section>
                 </div>
             </div>
         </main>
