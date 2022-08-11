@@ -34,17 +34,21 @@ h2:nth-child(1) {
 /* SECTION CODE */
 
 .section__code, ul {
-    margin-left: 3rem;
+    margin-left: 10rem;
     margin-right: 1rem;
-    text-align: justify;
 }
 
 .section__code {
     background-color: #bebebe;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 25px;
 }
 
 li {
     margin: 1rem 0;
     list-style: disc;
+}
+
+.code__indent {
+    margin-left: 2rem;
 }
