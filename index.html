@@ -23,7 +23,7 @@
             <div class="container">
                 <nav class="menu">
                     <div class="menu__left">
-                        <div class="menu__icon"></div>
+                        <div class="menu__icon"> 
                     </div>
                     <div class="menu__right">
                         <ul>
@@ -71,23 +71,23 @@
                             Let's decompose a "traditional anonymous function" down to the simplest "arrow function" step-by-step:
                         </p>
                         <p class="section__code">
-                                // Traditional Anonymous Function
-                                (function (a) {
-                                return a + 100;
-                                });
+                                // Traditional Anonymous Function</br>
+                                (function (a) {</br>
+                                return a + 100;</br>
+                                });</br>
+                                </br></br>
+                                // Arrow Function Break Down</br>
+                                </br></br>
+                                // 1. Remove the word "function" and place arrow between the argument and opening body bracket</br>
+                                (a) => {</br>
+                                return a + 100;</br>
+                                };</br>
 
-                                // Arrow Function Break Down
-
-                                // 1. Remove the word "function" and place arrow between the argument and opening body bracket
-                                (a) => {
-                                return a + 100;
-                                };
-
-                                // 2. Remove the body braces and word "return" — the return is implied.
-                                (a) => a + 100;
-
+                                // 2. Remove the body braces and word "return" — the return is implied.</br>
+                                (a) => a + 100;</br>
+                                </br></br>
                                 // 3. Remove the argument parentheses
-                                a => a + 100;
+                                a => a + 100;</br>
                         </p>
                         <p class="section__paragraph">
                             The { braces } and ( parentheses ) and "return" are required in some cases.
@@ -96,52 +96,52 @@
                             For example, if you have multiple arguments or no arguments, you'll need to re-introduce parentheses around the arguments:
                         </p>
                         <p class="section__code">
-                                // Traditional Anonymous Function
-                                (function (a, b) {
-                                return a + b + 100;
-                                });
-
-                                // Arrow Function
-                                (a, b) => a + b + 100;
-
-                                const a = 4;
-                                const b = 2;
-
+                                // Traditional Anonymous Function</br>
+                                (function (a, b) {</br>
+                                return a + b + 100;</br>
+                                });</br>
+                                </br></br>
+                                // Arrow Function</br>
+                                (a, b) => a + b + 100;</br>
+                                </br></br>
+                                const a = 4;</br>
+                                const b = 2;</br>
+                                </br></br>
                                 // Traditional Anonymous Function (no arguments)
-                                (function() {
-                                return a + b + 100;
-                                });
-
-                                // Arrow Function (no arguments)
-                                () => a + b + 100;
+                                (function() {</br>
+                                return a + b + 100;</br>
+                                });</br>
+                                </br></br>
+                                // Arrow Function (no arguments)</br>
+                                () => a + b + 100;</br>
                         </p>
                         <p class="section__paragraph">
                             Likewise, if the body requires additional lines of processing, you'll need to re-introduce braces PLUS the "return" (arrow functions do not magically guess what or when you want to "return"):
                         </p>
                         <p class="section__code">
-                            // Traditional Anonymous Function
-                            (function (a, b) {
-                            const chuck = 42;
-                            return a + b + chuck;
-                            });
-
-                            // Arrow Function
-                            (a, b) => {
-                            const chuck = 42;
-                            return a + b + chuck;
-                            };
+                            // Traditional Anonymous Function</br>
+                            (function (a, b) {</br>
+                            const chuck = 42;</br>
+                            return a + b + chuck;</br>
+                            });</br>
+                            </br></br>
+                            // Arrow Function</br>
+                            (a, b) => {</br>
+                            const chuck = 42;</br>
+                            return a + b + chuck;</br>
+                            };</br>
                         </p>
                         <p class="section__paragraph">
                             And finally, for named functions we treat arrow expressions like variables:
                         </p>
                         <p class="section__code">
-                            // Traditional Function
-                            function bob(a) {
-                            return a + 100;
-                            }
-
-                            // Arrow Function
-                            const bob2 = (a) => a + 100;
+                            // Traditional Function</br>
+                            function bob(a) {</br>
+                            return a + 100;</br>
+                            }</br>
+                            </br></br>
+                            // Arrow Function</br>
+                            const bob2 = (a) => a + 100;</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -162,20 +162,20 @@
                             Multiline statements require body braces and return:
                         </p>
                         <p class="section__code">
-                            // The parentheses are optional with one single parameter
-                            (param) => {
-                            const a = 1;
-                            return a + param;
-                            }
+                            // The parentheses are optional with one single parameter</br>
+                            (param) => {</br>
+                            const a = 1;</br>
+                            return a + param;</br>
+                            }</br>
                         </p>
                         <p class="section__paragraph">                           
                             Multiple params require parentheses. Multiline statements require body braces and return:
                         </p>
                         <p class="section__code">
-                            (param1, paramN) => {
-                            const a = 1;
-                            return a + param1 + paramN;
-                            }
+                            (param1, paramN) => {</br>
+                            const a = 1;</br>
+                            return a + param1 + paramN;</br>
+                            }</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -202,8 +202,8 @@
                             Destructuring within params is supported, and always requires parentheses:
                         </p>
                         <p class="section__code">
-                            ([a, b] = [10, 20]) => a + b;  // result is 30
-                            ({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30
+                            ([a, b] = [10, 20]) => a + b;  // result is 30</br>
+                            ({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -212,132 +212,140 @@
                             As stated previously, arrow function expressions are best suited for non-method functions. Let's see what happens when we try to use them as methods:
                         </p>
                         <p class="section__code">
-                            'use strict';
-
-                            const obj = { // does not create a new scope
-                            i: 10,
-                            b: () => console.log(this.i, this),
-                            c() {
-                                console.log(this.i, this);
-                            },
-                            }
-
-                            obj.b(); // prints undefined, Window { /* … */ } (or the global object)
-                            obj.c(); // prints 10, Object { /* … */ }
+                            'use strict';</br>
+                            </br></br>
+                            const obj = { // does not create a new scope</br>
+                            i: 10,</br>
+                            b: () => console.log(this.i, this),</br>
+                            c() {</br>
+                                <span class="code__indent">
+                                    console.log(this.i, this);</br>
+                                </span>    
+                            },</br>
+                            }</br>
+                            </br></br>
+                            obj.b(); // prints undefined, Window { /* … */ } (or the global object)</br>
+                            obj.c(); // prints 10, Object { /* … */ }</br>
                         </p>
                         <p class="section__paragraph">
                             Arrow functions do not have their own this. Another example involving Object.defineProperty():
                         </p>
                         <p class="section__code">
-                            'use strict';
-
-                            const obj = {
-                            a: 10,
-                            };
-
-                            Object.defineProperty(obj, 'b', {
-                            get: () => {
-                                console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { /* … */ } (or the global object)
-                                return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
-                            },
-                            });
+                            'use strict';</br>
+                            </br></br>
+                            const obj = {</br>
+                            a: 10,</br>
+                            };</br>
+                            </br></br>
+                            Object.defineProperty(obj, 'b', {</br>
+                            get: () => {</br>
+                                <span class="code__indent">
+                                    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { /* … */ } (or the global object)</br>
+                                    return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'</br>
+                                </span>
+                            },</br>
+                            });</br>
                         </p>
                         <p class="section__paragraph">
                             Because a class's body has a this context, arrow functions as class fields close over the class's this context and the this inside the arrow function's body will correctly point to the instance (or the class itself, for static fields). However, because it is a closure, not the function's own binding, the value of this will not change based on the execution context.
                         </p>
                         <p class="section__code">    
-                            class C {
-                            a = 1;
-                            autoBoundMethod = () => {
-                                console.log(this.a);
-                            }
-                            }
-
-                            const c = new C();
-                            c.autoBoundMethod(); // 1
-                            const { autoBoundMethod } = c;
-                            autoBoundMethod(); // 1
-                            // If it were a normal method, it should be undefined in this case
+                            class C {</br>
+                            a = 1;</br>
+                            autoBoundMethod = () => {</br>
+                                console.log(this.a);</br>
+                            }</br>
+                            }</br>
+                            </br></br>
+                            const c = new C();</br>
+                            c.autoBoundMethod(); // 1</br>
+                            const { autoBoundMethod } = c;</br>
+                            autoBoundMethod(); // 1</br>
+                            // If it were a normal method, it should be undefined in this case</br>
                         </p>
                         <p class="section__paragraph">
                             Arrow function properties are often said to be "auto-bound methods", because the equivalent with normal methods is:
                         </p>
                         <p class="section__code">
-                            class C {
-                            a = 1;
-                            constructor() {
-                                this.method = this.method.bind(this);
-                            }
-                            method() {
-                                console.log(this.a);
-                            }
-                            }
+                            class C {</br>
+                            a = 1;</br>
+                            constructor() {</br>
+                                <span class="code__indent">
+                                    this.method = this.method.bind(this);</br>
+                                </span>
+                            }</br>
+                            method() {</br>
+                                console.log(this.a);</br>
+                            }</br>
+                            }</br>
                         </p>
                     </section>
                     <section class="content__section">
                         <h3>call, apply and bind</h3>
                         <p class="section__paragraph">
                             The call, apply and bind methods are NOT suitable as arrow functions – as they were designed to allow methods to execute within different scopes – because arrow functions establish this based on the scope the arrow function is defined within.
-
+                        </p>
+                        <p class="section__paragraph">
                             For example call, apply and bind work as expected with traditional functions, because we establish the scope for each of the methods:
                         </p>
                         <p class="section__code">
-                            // ----------------------
-                            // Traditional Example
-                            // ----------------------
-                            // A simplistic object with its very own "this".
-                            const obj = {
-                            num: 100,
-                            };
-
-                            // Setting "num" on window to show how it is NOT used.
-                            window.num = 2020; // yikes!
-
-                            // A simple traditional function to operate on "this"
-                            const add = function (a, b, c) {
-                            return this.num + a + b + c;
-                            };
-
-                            // call
-                            const resultCall = add.call(obj, 1, 2, 3); // establishing the scope as "obj"
-                            console.log(resultCall); // result 106
-
-                            // apply
-                            const arr = [1, 2, 3];
-                            const resultApply = add.apply(obj, arr); // establishing the scope as "obj"
-                            console.log(resultApply); // result 106
-
-                            // bind
-                            const resultBind = add.bind(obj); // establishing the scope as "obj"
-                            console.log(resultBind(1, 2, 3)); // result 106
-                            Copy to Clipboard
+                            // ----------------------</br>
+                            // Traditional Example</br>
+                            // ----------------------</br>
+                            // A simplistic object with its very own "this".</br>
+                            const obj = {</br>
+                            num: 100,</br>
+                            };</br>
+                            </br></br>
+                            // Setting "num" on window to show how it is NOT used.</br>
+                            window.num = 2020; // yikes!</br>
+                            </br></br>
+                            // A simple traditional function to operate on "this"</br>
+                            const add = function (a, b, c) {</br>
+                            return this.num + a + b + c;</br>
+                            };</br>
+                            </br></br>
+                            // call</br>
+                            const resultCall = add.call(obj, 1, 2, 3); // establishing the scope as "obj"</br>
+                            console.log(resultCall); // result 106</br>
+                            </br></br>
+                            // apply</br>
+                            const arr = [1, 2, 3];</br>
+                            const resultApply = add.apply(obj, arr); // establishing the scope as "obj"</br>
+                            console.log(resultApply); // result 106</br>
+                            </br></br>
+                            // bind</br>
+                            const resultBind = add.bind(obj); // establishing the scope as "obj"</br>
+                            console.log(resultBind(1, 2, 3)); // result 106</br>
+                        <p class="section__paragraph">
                             With arrow functions, since our add function is essentially created on the window (global) scope, it will assume this is the window.
-
-                            // ----------------------
-                            // Arrow Example
-                            // ----------------------
-
-                            // A simplistic object with its very own "this".
-                            const obj = {
-                            num: 100,
-                            };
-
-                            // Setting "num" on window to show how it gets picked up.
-                            window.num = 2020; // yikes!
-
-                            // Arrow Function
-                            const add = (a, b, c) => this.num + a + b + c;
-
-                            // call
-                            console.log(add.call(obj, 1, 2, 3)); // result 2026
-
-                            // apply
-                            const arr = [1, 2, 3];
-                            console.log(add.apply(obj, arr)); // result 2026
-
-                            // bind
-                            const bound = add.bind(obj);
-                            console.log(bound(1, 2, 3)); // result 2026
+                        </p>
+                        <p class="section__code">
+                            // ----------------------</br>
+                            // Arrow Example</br>
+                            // ----------------------</br>
+                            </br></br>
+                            // A simplistic object with its very own "this".</br>
+                            const obj = {</br>
+                            num: 100,</br>
+                            };</br>
+                            </br></br>
+                            // Setting "num" on window to show how it gets picked up.</br>
+                            window.num = 2020; // yikes!</br>
+                            </br></br>
+                            // Arrow Function</br>
+                            const add = (a, b, c) => this.num + a + b + c;</br>
+                            </br></br>
+                            // call</br>
+                            console.log(add.call(obj, 1, 2, 3)); // result 2026</br>
+                            </br></br>
+                            // apply</br>
+                            const arr = [1, 2, 3];</br>
+                            console.log(add.apply(obj, arr)); // result 2026</br>
+                            </br></br>
+                            // bind</br>
+                            const bound = add.bind(obj);</br>
+                            console.log(bound(1, 2, 3)); // result 2026</br>
                         </p>
                         <p class="section__paragraph">
                             Perhaps the greatest benefit of using Arrow functions is with methods like setTimeout() and EventTarget.addEventListener() that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
@@ -346,38 +354,42 @@
                     <section class="content__section">
                         <h3>Traditional function example</h3>
                         <p class="section__code">
-                            const obj = {
-                            count: 10,
-                            doSomethingLater() {
-                                setTimeout(function () { // the function executes on the window scope
-                                this.count++;
-                                console.log(this.count);
-                                }, 300);
-                            },
-                            };
-
-                            obj.doSomethingLater(); // console prints "NaN", because the property "count" is not in the window scope.
+                            const obj = {</br>
+                            count: 10,</br>
+                            doSomethingLater() {</br>
+                                <span class="code__indent">
+                                    setTimeout(function () { // the function executes on the window scope</br>
+                                    this.count++;</br>
+                                    console.log(this.count);</br>
+                                    }, 300);</br>
+                                </span>
+                            },</br>
+                            };</br>
+                            </br></br>
+                            obj.doSomethingLater(); // console prints "NaN", because the property "count" is not in the window scope.</br>
                         </p>
                     </section>
                     <section class="content__section">
                         <h3>Arrow function example</h3>
                         <p class="section__code">
-                            const obj = {
-                            count: 10,
-                            doSomethingLater () {
-                                // The traditional function binds "this" to the "obj" context.
-                                setTimeout(() => {
-                                // Since the arrow function doesn't have its own binding and
-                                // setTimeout (as a function call) doesn't create a binding
-                                // itself, the "obj" context of the traditional function will
-                                // be used within.
-                                this.count++;
-                                console.log(this.count);
-                                }, 300);
-                            },
-                            };
-
-                            obj.doSomethingLater();
+                            const obj = {</br>
+                            count: 10,</br>
+                            doSomethingLater () {</br>
+                                <span class="code__indent">
+                                    // The traditional function binds "this" to the "obj" context.</br>
+                                    setTimeout(() => {</br>
+                                    // Since the arrow function doesn't have its own binding and</br>
+                                    // setTimeout (as a function call) doesn't create a binding</br>
+                                    // itself, the "obj" context of the traditional function will</br>
+                                    // be used within.</br>
+                                    this.count++;</br>
+                                    console.log(this.count);</br>
+                                    }, 300);</br>
+                                </span>
+                            },</br>
+                            };</br>
+                            </br></br>
+                            obj.doSomethingLater();</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -386,28 +398,28 @@
                             Arrow functions do not have their own arguments object. Thus, in this example, arguments is a reference to the arguments of the enclosing scope:
                         </p>
                         <p class="section__code">    
-                            const arguments = [1, 2, 3];
-                            const arr = () => arguments[0];
-
-                            arr(); // 1
-
-                            function foo(n) {
-                            const f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
-                            return f();
-                            }
-
-                            foo(3); // 3 + 3 = 6
+                            const arguments = [1, 2, 3];</br>
+                            const arr = () => arguments[0];</br>
+                            </br></br>
+                            arr(); // 1</br>
+                            </br></br>
+                            function foo(n) {</br>
+                            const f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n</br>
+                            return f();</br>
+                            }</br>
+                            </br></br>
+                            foo(3); // 3 + 3 = 6</br>
                         </p>
                         <p class="section__paragraph">
                             In most cases, using rest parameters is a good alternative to using an arguments object.
                         </p>
                         <p class="section__code">
-                            function foo(n) {
-                            const f = (...args) => args[0] + n;
-                            return f(10);
-                            }
-
-                            foo(1); // 11
+                            function foo(n) {</br>
+                            const f = (...args) => args[0] + n;</br>
+                            return f(10);</br>
+                            }</br>
+                            </br></br>
+                            foo(1); // 11</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -416,8 +428,8 @@
                             Arrow functions cannot be used as constructors and will throw an error when used with new.
                         </p>
                         <p class="section__code">
-                            const Foo = () => {};
-                            const foo = new Foo(); // TypeError: Foo is not a constructor
+                            const Foo = () => {};</br>
+                            const foo = new Foo(); // TypeError: Foo is not a constructor</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -426,8 +438,8 @@
                             Arrow functions do not have a prototype property.
                         </p>
                         <p class="section__code">
-                            const Foo = () => {};
-                            console.log(Foo.prototype); // undefined
+                            const Foo = () => {};</br>
+                            console.log(Foo.prototype); // undefined</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -444,11 +456,11 @@
                             In a concise body, only an expression is specified, which becomes the implicit return value. In a block body, you must use an explicit return statement.
                         </p>
                         <p class="section__code">
-                            const func = (x) => x * x;
-                            // concise body syntax, implied "return"
-
-                            const func2 = (x, y) => { return x + y; };
-                            // with block body, explicit "return" needed
+                            const func = (x) => x * x;</br>
+                            // concise body syntax, implied "return"</br>
+                            </br></br>
+                            const func2 = (x, y) => { return x + y; };</br>
+                            // with block body, explicit "return" needed</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -457,14 +469,14 @@
                             Keep in mind that returning object literals using the concise body syntax (params) => {object:literal} will not work as expected.
                         </p>
                         <p class="section__code">
-                            const func = () => { foo: 1 };
-                            // Calling func() returns undefined!
-
-                            const func2 = () => { foo: function () {} };
-                            // SyntaxError: function statement requires a name
-
-                            const func3 = () => { foo() {} };
-                            // SyntaxError: Unexpected token '{'
+                            const func = () => { foo: 1 };</br>
+                            // Calling func() returns undefined!</br>
+                            </br></br>
+                            const func2 = () => { foo: function () {} };</br>
+                            // SyntaxError: function statement requires a name</br>
+                            </br></br>
+                            const func3 = () => { foo() {} };</br>
+                            // SyntaxError: Unexpected token '{'</br>
                         </p>
                         <p class="section__paragraph">
                             This is because the code inside braces ({}) is parsed as a sequence of statements (i.e. foo is treated like a label, not a key in an object literal).
@@ -481,32 +493,32 @@
                             An arrow function cannot contain a line break between its parameters and its arrow.
                         </p>
                         <p class="section__code">
-                            const func = (a, b, c)
-                            => 1;
-                            // SyntaxError: Unexpected token '=>'
+                            const func = (a, b, c)</br>
+                            => 1;</br>
+                            // SyntaxError: Unexpected token '=>'</br>
                         </p>
                         <p class="section__paragraph">
                             However, this can be amended by putting the line break after the arrow or using parentheses/braces as seen below to ensure that the code stays pretty and fluffy. You can also put line breaks between arguments.
                         </p>
                         <p class="section__code">
-                            const func = (a, b, c) =>
-                            1;
-
-                            const func2 = (a, b, c) => (
-                            1
-                            );
-
-                            const func3 = (a, b, c) => {
-                            return 1;
-                            };
-
-                            const func4 = (
-                            a,
-                            b,
-                            c
-                            ) => 1;
-
-                            // no SyntaxError thrown
+                            const func = (a, b, c) =></br>
+                            1;</br>
+                            </br></br>
+                            const func2 = (a, b, c) => (</br>
+                            1</br>
+                            );</br>
+                            </br></br>
+                            const func3 = (a, b, c) => {</br>
+                            return 1;</br>
+                            };</br>
+                            </br></br>
+                            const func4 = (</br>
+                            a,</br>
+                            b,</br>
+                            c</br>
+                            ) => 1;</br>
+                            </br></br>
+                            // no SyntaxError thrown</br>
                         </p>
                     </section>
                     <section class="content__section">
@@ -515,10 +527,10 @@
                             Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with operator precedence compared to regular functions.
                         </p>
                         <p class="section__code"> 
-                            let callback;
-
-                            callback = callback || () => {};
-                            // SyntaxError: invalid arrow-function arguments
+                            let callback;</br>
+                            </br></br>
+                            callback = callback || () => {};</br>
+                            // SyntaxError: invalid arrow-function arguments</br>
                         </p>
                         <p class="section__paragraph">
                             Because => has a lower precedence than most operators, parentheses are necessary to avoid callback || () being parsed as the arguments list of the arrow function.
