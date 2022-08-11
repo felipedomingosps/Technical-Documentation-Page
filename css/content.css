@@ -34,7 +34,7 @@ h2:nth-child(1) {
 /* SECTION CODE */
 
 .section__code, ul {
-    margin-left: 10rem;
+    margin-left: 5rem;
     margin-right: 1rem;
 }
 
